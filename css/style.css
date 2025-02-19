@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Horizontal Scrolling Section */
+#horizontal {
+    display: flex;
+    overflow-x: hidden;
+    width: 400vw; /* Keeps all sections in a horizontal row */
+    height: 100vh;
+}
+
+/* Content Box */
+#horizontal .contant {
+    height: 100vh;
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 50px;
+}
+
+/* Background images */
+#horizontal .contant:nth-child(1) {
+    background: url(../img/assorted-raw-meat-for-carnivore-diet-2025-02-12-19-26-19-utc.jpg) center/cover no-repeat;
+   
+}
+
+#horizontal .contant:nth-child(2) {
+    background: url(../img/a-collection-of-fresh-cuts-of-meat-complemented-by-2024-10-18-08-17-34-utc.jpg) center/cover no-repeat;
+}
+
+#horizontal .contant:nth-child(3) {
+    background: url(../img/close-up-of-various-cuts-of-beef-on-shelves-in-a-b-2023-11-27-05-26-16-utc.jpg) center/cover no-repeat;
+}
+
+#horizontal .contant:nth-child(4) {
+    background: url(../img/male-butcher-demonstrating-meat-in-supermarket-2023-11-27-05-00-07-utc.JPG) center/cover no-repeat;
+}
+
+/* Fix Overlay - Make it Lighter */
+#horizontal .contant::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg, 
+        rgba(0, 0, 0, 0.5) 50%, /* Less dark at top */
+        rgba(242, 41, 91, 0.4) 100% /* Softer red gradient */
+    );
+    z-index: 1;
+}
+
+/* Fix Text Visibility */
+#horizontal .text-wrapper {
+    max-width: 75%;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    text-align: center;
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8); /* Glowing effect */
+}
+
+/* Make Title Stand Out */
+#horizontal .text-wrapper h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #FFD700; /* Gold */
+    text-shadow: 3px 3px 20px rgba(255, 215, 0, 1); /* Strong glow */
+    margin-bottom: 15px;
+}
+
+/* Make Paragraph Text Stand Out */
+#horizontal .text-wrapper p {
+    font-size: 18px; /* Updated font size */
+    line-height: 1.6; /* Updated line height */
+    font-weight: 400;
+    color: #f8f8f8; /* Light creamy white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Darker shadow for better readability */
+}
+
+
+/* Text Hover Effect */
+#horizontal .text-wrapper h1:hover {
+    text-shadow: 4px 4px 30px rgba(255, 215, 0, 1); /* Brighter glow */
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ABOUT US SECTION */
+.about {
+    background: #111; /* Dark background */
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about .main {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about_text {
+    max-width: 550px;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.about_text h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.about_text h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.about_text h3 span {
+    color: #f2425b; /* Red highlight */
+}
+
+.about_text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 15px;
+    color: #ddd;
+}
+
+/* BUTTON STYLE */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background: #f2425b;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff4d6d;
+    transform: scale(1.05);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.0); /* Slight transparency */
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 80px; /* Adjust size as needed */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold effect */
+}
+
+
